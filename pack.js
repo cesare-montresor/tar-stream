@@ -97,8 +97,15 @@ class Pack extends Readable {
       this._encode(header)
       const ok = this.push(buffer)
       overflow(self, header.size)
-      if (ok) process.nextTick(callback)
-      else this._drain = callback
+      if (ok) {
+        if (typeof process !== 'undefined') {
+          process.nextTick(callback)
+        } else {
+          setTimeout(() => { callback() }, 0)
+        }
+      } else {
+        this._drain = callback
+      }
       return new Void()
     }
 
@@ -121,7 +128,11 @@ class Pack extends Readable {
     this._encode(header)
 
     if (header.type !== 'file' && header.type !== 'contiguous-file') {
-      process.nextTick(callback)
+      if (typeof process !== 'undefined') {
+        process.nextTick(callback)
+      } else {
+        setTimeout(() => { callback() }, 0)
+      }
       return new Void()
     }
 
