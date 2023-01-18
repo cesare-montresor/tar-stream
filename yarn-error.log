@@ -14,23 +14,23 @@ Platform:
   linux x64
 
 Trace: 
-  Error: canceled
-      at Interface.<anonymous> (/home/cesare/.nvm/versions/node/v18.12.1/lib/node_modules/yarn/lib/cli.js:137150:13)
-      at Interface.emit (node:events:513:28)
-      at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1124:18)
-      at ReadStream.onkeypress (node:internal/readline/interface:273:20)
-      at ReadStream.emit (node:events:513:28)
-      at emitKeys (node:internal/readline/utils:357:14)
-      at emitKeys.next (<anonymous>)
-      at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
-      at ReadStream.emit (node:events:513:28)
-      at addChunk (node:internal/streams/readable:324:12)
+  Error: https://registry.yarnpkg.com/-/user/org.couchdb.user:cesare.montresor: failed to authenticate: Could not authenticate cesare.montresor: bad password
+      at params.callback [as _callback] (/home/cesare/.nvm/versions/node/v18.12.1/lib/node_modules/yarn/lib/cli.js:66145:18)
+      at self.callback (/home/cesare/.nvm/versions/node/v18.12.1/lib/node_modules/yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:513:28)
+      at Request.<anonymous> (/home/cesare/.nvm/versions/node/v18.12.1/lib/node_modules/yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:513:28)
+      at IncomingMessage.<anonymous> (/home/cesare/.nvm/versions/node/v18.12.1/lib/node_modules/yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:627:28)
+      at IncomingMessage.emit (node:events:525:35)
+      at endReadableNT (node:internal/streams/readable:1359:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 
 npm manifest: 
   {
-    "name": "tar-stream-web",
-    "version": "3.0.0-alpha",
-    "description": "tar-stream-web is patched version of tar-stream that runs in a web browser. The original project https://github.com/mafintosh/tar-stream provides a streaming tar parser and generator and nothing else. It operates purely using streams which means you can easily extract/parse tarballs without ever hitting the file system.",
+    "name": "tar-web",
+    "version": "3.0.0-alpha-1",
+    "description": "tar-web is patched version of tar-stream that runs in a web browser. The original project https://github.com/mafintosh/tar-stream provides a streaming tar parser and generator and nothing else. It operates purely using streams which means you can easily extract/parse tarballs without ever hitting the file system.",
     "main": "index.js",
     "files": [
       "*.js"
@@ -40,14 +40,14 @@ npm manifest:
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/cesare-montresor/tar-stream-web.git"
+      "url": "git+https://github.com/cesare-montresor/tar-web.git"
     },
     "author": "Cesare Montresor <cesare.montresor@gmail.com>",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/cesare-montresor/tar-stream-web/issues"
+      "url": "https://github.com/cesare-montresor/tar-web/issues"
     },
-    "homepage": "https://github.com/cesare-montresor/tar-stream-web",
+    "homepage": "https://github.com/cesare-montresor/tar-web",
     "dependencies": {
       "b4a": "^1.6.1",
       "bl": "^6.0.0",

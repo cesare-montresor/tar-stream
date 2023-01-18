@@ -1,6 +1,6 @@
 {
   "name": "tar-web",
-  "version": "3.0.0-alpha",
+  "version": "3.0.0-alpha-2",
   "description": "tar-web is patched version of tar-stream that runs in a web browser. The original project https://github.com/mafintosh/tar-stream provides a streaming tar parser and generator and nothing else. It operates purely using streams which means you can easily extract/parse tarballs without ever hitting the file system.",
   "main": "index.js",
   "files": [
